@@ -19,7 +19,7 @@ pipeline {
      steps {
 
          sh 'sudo terraform init'
-         sh 'source env-vars'
+         sh 'sudo source env-vars'
          sh 'sudo terraform plan -var-file=terraform.tfvars -out myplan'
      }
    }
