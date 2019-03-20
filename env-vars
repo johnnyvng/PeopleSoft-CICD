@@ -3,8 +3,8 @@
 export TF_VAR_tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaa5txfxrudc5ezitovlpjznw6b3l6sqvkzddepsfu4es2i4x2xyeia"
 # oracleidentitycloudservice/john.nguyen-tran@oracle.com
 export TF_VAR_user_ocid="ocid1.user.oc1..aaaaaaaauswqglws5mp2yhqbfizqqflhddx3qlcsp5woqoj7saofthsaprhq"
-# Time Created: Wed, 20 Mar 2019 18:50:10 GMT
-export TF_VAR_fingerprint="4c:fd:42:d6:29:bc:3c:21:7e:31:38:ea:91:3e:2a:22"
+# Time Created: Wed, 20 Mar 2019 20:19:37 GMT
+export TF_VAR_fingerprint="75:b5:6e:9d:c7:a1:cf:ff:3d:08:4b:d0:e8:29:93:05"
 export TF_VAR_private_key_path="/Users/jnguyent/.oci/oci_api_key.pem"
 
 ### Region

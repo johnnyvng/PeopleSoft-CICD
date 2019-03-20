@@ -1,0 +1,41 @@
+pipeline {
+
+  agent any
+
+  environment {
+    SVC_ACCOUNT_KEY = credentials('terraform-auth')
+  }
+
+  stages {
+
+   stage('Checkout') {
+     steps {
+       checkout scm
+
+     }
+   }
+
+   stage('Plan') {
+     steps {
+
+         sh 'sudo terraform init'
+         sh 'sudo terraform plan -var-file=terraform.tfvars -out myplan'
+     }
+   }
+stage('Approval') {
+     steps {
+       script {
+         def userInput = input(id: 'confirm', message: 'Apply_Terraform', parameters: [ [$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Apply_Terraform', name: 'confirm'] ])
+       }
+     }
+   }
+
+   stage('Apply') {
+     steps {
+          sh 'sudo terraform apply myplan'
+         
+     }
+   }
+}
+
+}
