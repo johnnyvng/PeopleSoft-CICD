@@ -32,7 +32,7 @@ psft_env_prefix = "psftprd"
 psft_app_instance_count = "2"
 
 # Shape of app instance
-psft_app_instance_shape =  "VM.Standard2.2"
+psft_app_instance_shape =  "VM.Standard2.1"
 
 # Listen port range of the application instance
 psft_app_instance_listen_port_range = ["9033", "9039"]
@@ -98,7 +98,7 @@ db_name =  "PSFTCDB"
 db_size_in_gb = "256"
 
 # Database administration (sys) password
-db_admin_password = "W3lCome1234567##"
+db_admin_password = "<password>"
 
 # Characterset of database
 db_characterset = "AL32UTF8"
@@ -110,7 +110,7 @@ db_nls_characterset = "AL16UTF16"
 db_pdb_name = "DUMMYPDB"
 
 # Hostname of Load Balancer
-load_balancer_hostname =  "psft.test.com"
+load_balancer_hostname =  "psft.example.com"
 
 # Shape of Load Balancer
 load_balancer_shape = "100Mbps"

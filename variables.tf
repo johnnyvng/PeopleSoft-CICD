@@ -227,16 +227,20 @@ variable "fingerprint" {}
 variable "private_key_path" {}
 variable "ssh_public_key" {
     description = "SSH public key for instances"
+    default = "/Users/jnguyent/.ssh/OCI"
 }
 variable "ssh_private_key" {
     description = "SSH private key for instances"
+    default = "/Users/jnguyent/.ssh/OCI"
 }  
 
 variable "bastion_ssh_public_key" {
     description = "SSH public key for bastion instance"
+    default = "/Users/jnguyent/.ssh/OCI.pub"
 }
 variable "bastion_ssh_private_key" {
     description = "SSH private key for bastion_instance"
+    default = "/Users/jnguyent/.ssh/OCI"
 }  
 variable "instance_os" {
     description = "Operating system for compute instances"

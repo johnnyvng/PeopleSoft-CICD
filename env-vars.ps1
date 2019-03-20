@@ -5,7 +5,9 @@
 
 ### Authentication details
 # Orasenatdpltoci02 
-$env:TF_VAR_tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaa5txfxrudc5ezitovlpjznw6b3l6sqvkzddepsfu4es2i4x2xyeia"
+# $env:TF_VAR_tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaa5txfxrudc5ezitovlpjznw6b3l6sqvkzddepsfu4es2i4x2xyeia"
+# orasenatdhubsred01
+$env:TF_VAR_tenancy_ocid="ocid1.tenancy.oc1..aaaaaaaajehugl3ryss2gaxf3os7g5w4xdztfhy4coqnoizm2wpmrclnv5da"
 # oracleidentitycloudservice/john.nguyen-tran@oracle.com
 $env:TF_VAR_user_ocid="ocid1.user.oc1..aaaaaaaauswqglws5mp2yhqbfizqqflhddx3qlcsp5woqoj7saofthsaprhq"
 # Time Created: Wed, 20 Mar 2019 20:19:37 GMT
