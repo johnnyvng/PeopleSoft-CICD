@@ -7,4 +7,6 @@ The Universal Permissive License (UPL), Version 1.0*/
 data "oci_core_instance_credentials" "win" {
   count       = "${var.compute_platform != "linux" ? var.compute_instance_count : 0}"
   instance_id = "${oci_core_instance.compute.*.id[count.index]}"
+  # username = "opc"
+  # password = "P@ssw0rd123!!"
 }

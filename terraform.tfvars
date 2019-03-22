@@ -32,7 +32,7 @@ psft_env_prefix = "psftprd"
 psft_app_instance_count = "2"
 
 # Shape of app instance
-psft_app_instance_shape =  "VM.Standard2.1"
+psft_app_instance_shape =  "VM.Standard2.2"
 
 # Listen port range of the application instance
 psft_app_instance_listen_port_range = ["9033", "9039"]
@@ -41,7 +41,7 @@ psft_app_instance_listen_port_range = ["9033", "9039"]
 psft_ps_instance_count = "2"
 
 # Shape of process scheduler instance
-psft_ps_instance_shape =  "VM.Standard2.1"
+psft_ps_instance_shape =  "VM.Standard2.2"
 
 # Listen port range of the process scheduler instance
 psft_ps_instance_listen_port_range = ["2320", "2321"]
@@ -50,13 +50,13 @@ psft_ps_instance_listen_port_range = ["2320", "2321"]
 psft_es_instance_count = "2"
 
 # Shape of elastic search instance
-psft_es_instance_shape =  "VM.Standard2.1"
+psft_es_instance_shape =  "VM.Standard2.2"
 
 # Listen port of the elastic search instance
 psft_es_instance_listen_port = "9200"
 
 # Shape of tools instance
-psft_tls_instance_shape =  "VM.Standard1.2"
+psft_tls_instance_shape =  "VM.Standard2.4"
 
 # Listen port range of the tools instance
 psft_tls_instance_listen_port_range = ["5985", "5986"]
@@ -65,7 +65,7 @@ psft_tls_instance_listen_port_range = ["5985", "5986"]
 psft_web_instance_count = "2"
 
 # Shape of web instance
-psft_web_instance_shape =  "VM.Standard2.1"
+psft_web_instance_shape =  "VM.Standard2.4"
 
 # Listen port of the web instance
 psft_web_instance_listen_port = "8000"
@@ -98,7 +98,7 @@ db_name =  "PSFTCDB"
 db_size_in_gb = "256"
 
 # Database administration (sys) password
-db_admin_password = "<password>"
+db_admin_password = "W3lCome1234567##"
 
 # Characterset of database
 db_characterset = "AL32UTF8"

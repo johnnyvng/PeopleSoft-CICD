@@ -194,7 +194,10 @@ module "create_bastion" {
   AD                          = "${var.AD}"
   availability_domain         = ["${data.template_file.deployment_ad.*.rendered}"]
   bastion_hostname_prefix     = "${var.psft_env_prefix}bas${substr(var.region, 3, 3)}"
-  bastion_image               = "${data.oci_core_images.InstanceImageOCID.images.0.id}"
+  # Ashburn-1
+  bastion_image               = "ocid1.image.oc1.iad.aaaaaaaaur6pzb6sguyw3yopts3otk7sndq2uxezibb24x4lk4n57wgves7q"
+  # Phoenix-1
+  # bastion_image               = "ocid1.image.oc1.phx.aaaaaaaadgf72bbw6kl4metlw5jolbpfmkejxbsnirqcsx77nxkfh4subn7a"
   bastion_instance_shape      = "${var.bastion_instance_shape}"
   bastion_subnet              = ["${module.bastion_subnet.subnetid}"]
   bastion_ssh_public_key      = "${var.bastion_ssh_public_key}"
@@ -213,7 +216,10 @@ module "create_app" {
   compute_hostname_prefix         = "${var.psft_env_prefix}app${substr(var.region, 3, 3)}"
   compute_boot_volume_size_in_gb  = "${var.compute_boot_volume_size_in_gb}"
   compute_block_volume_size_in_gb = "${var.compute_block_volume_size_in_gb}"
-  compute_image                   = "${data.oci_core_images.InstanceImageOCID.images.0.id}"
+  # Ashburn-1
+  compute_image                   = "ocid1.image.oc1.iad.aaaaaaaaur6pzb6sguyw3yopts3otk7sndq2uxezibb24x4lk4n57wgves7q"
+  # Phoenix-1
+  # compute_image                   = "ocid1.image.oc1.phx.aaaaaaaadgf72bbw6kl4metlw5jolbpfmkejxbsnirqcsx77nxkfh4subn7a"
   compute_instance_shape          = "${var.psft_app_instance_shape}"
   compute_subnet                  = ["${module.app_subnet.subnetid}"]
   compute_ssh_public_key          = "${var.ssh_public_key}"
@@ -240,7 +246,10 @@ module "create_elastic_search" {
   compute_hostname_prefix         = "${var.psft_env_prefix}es${substr(var.region, 3, 3)}"
   compute_boot_volume_size_in_gb  = "${var.compute_boot_volume_size_in_gb}"
   compute_block_volume_size_in_gb = "${var.compute_block_volume_size_in_gb}"
-  compute_image                   = "${data.oci_core_images.InstanceImageOCID.images.0.id}"
+  # Ashburn-1
+  compute_image                   = "ocid1.image.oc1.iad.aaaaaaaaur6pzb6sguyw3yopts3otk7sndq2uxezibb24x4lk4n57wgves7q"
+  # Phoenix-1
+  # compute_image                   = "ocid1.image.oc1.phx.aaaaaaaadgf72bbw6kl4metlw5jolbpfmkejxbsnirqcsx77nxkfh4subn7a"
   compute_instance_shape          = "${var.psft_es_instance_shape}"
   compute_subnet                  = ["${module.els_subnet.subnetid}"]
   compute_ssh_public_key          = "${var.ssh_public_key}"
@@ -267,7 +276,10 @@ module "create_process_schd" {
   compute_hostname_prefix         = "${var.psft_env_prefix}ps${substr(var.region, 3, 3)}"
   compute_boot_volume_size_in_gb  = "${var.compute_boot_volume_size_in_gb}"
   compute_block_volume_size_in_gb = "${var.compute_block_volume_size_in_gb}"
-  compute_image                   = "${data.oci_core_images.InstanceImageOCID.images.0.id}"
+  # Ashburn-1
+  compute_image                   = "ocid1.image.oc1.iad.aaaaaaaaur6pzb6sguyw3yopts3otk7sndq2uxezibb24x4lk4n57wgves7q"
+  # Phoenix-1
+  # compute_image                   = "$ocid1.image.oc1.phx.aaaaaaaadgf72bbw6kl4metlw5jolbpfmkejxbsnirqcsx77nxkfh4subn7a"
   compute_instance_shape          = "${var.psft_ps_instance_shape}"
   compute_subnet                  = ["${module.app_subnet.subnetid}"]
   compute_ssh_public_key          = "${var.ssh_public_key}"
@@ -294,7 +306,10 @@ module "create_web" {
   compute_hostname_prefix         = "${var.psft_env_prefix}web${substr(var.region, 3, 3)}"
   compute_boot_volume_size_in_gb  = "${var.compute_boot_volume_size_in_gb}"
   compute_block_volume_size_in_gb = "${var.compute_block_volume_size_in_gb}"
-  compute_image                   = "${data.oci_core_images.InstanceImageOCID.images.0.id}"
+  # Ashburn-1
+  compute_image                   = "ocid1.image.oc1.iad.aaaaaaaaur6pzb6sguyw3yopts3otk7sndq2uxezibb24x4lk4n57wgves7q"
+  # Phoenix-1
+  # compute_image                   = "$ocid1.image.oc1.phx.aaaaaaaadgf72bbw6kl4metlw5jolbpfmkejxbsnirqcsx77nxkfh4subn7a"
   compute_instance_shape          = "${var.psft_web_instance_shape}"
   compute_subnet                  = ["${module.web_subnet.subnetid}"]
   compute_ssh_public_key          = "${var.ssh_public_key}"
@@ -319,7 +334,10 @@ module "create_ptools" {
   compute_instance_count          = "${length(var.AD)}"
   compute_platform                = "windows"
   compute_hostname_prefix         = "${var.psft_env_prefix}tls${substr(var.region, 3, 3)}"
-  compute_image                   = "${data.oci_core_images.WinInstanceImageOCID.images.3.id}"
+  # Ashburn-1
+  compute_image                   = "ocid1.image.oc1.iad.aaaaaaaa4ukqa5zrksyeliqk3kemr74zdigy7rh6cz5zbivgsp6je45jqvfq"
+  # Phoenix-1
+  # compute_image                   = "ocid1.image.oc1.phx.aaaaaaaadg4pvnxn475fb6snyxagqzbgvuswsyfsdrw4cfpedy2vz2yptyzq"
   compute_instance_shape          = "${var.psft_tls_instance_shape}"
   compute_subnet                  = ["${module.ptools_subnet.subnetid}"]
   compute_boot_volume_size_in_gb  = "256"
